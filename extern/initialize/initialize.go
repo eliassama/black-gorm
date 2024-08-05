@@ -1,7 +1,7 @@
 package ormInitialize
 
 import (
-	logger "gitea.elias.ink/go/logger/gorm"
+	"github.com/eliassama/black-zap/gormlogger"
 	"gorm.io/gorm"
 	gormLogger "gorm.io/gorm/logger"
 	"gorm.io/gorm/schema"
@@ -29,7 +29,7 @@ func New(dialector gorm.Dialector, levels ...gormLogger.LogLevel) (*gorm.DB, err
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true, // 使用单数表名，如果启用此选项，`User` 的表将是 `user`
 		},
-		Logger: logger.New(level),
+		Logger: gormlogger.New(level),
 	})
 
 	if err != nil {

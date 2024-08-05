@@ -3,7 +3,7 @@ module github.com/eliassama/black-gorm
 go 1.19
 
 require (
-	gitea.elias.ink/go/logger v0.1.0
+	github.com/eliassama/black-zap v1.0.0
 	github.com/go-redis/redis/v8 v8.11.5
 	gorm.io/driver/clickhouse v0.5.0
 	gorm.io/driver/mysql v1.4.5
@@ -12,7 +12,6 @@ require (
 )
 
 require (
-	gitea.elias.ink/go/utils v0.0.0-20230202160723-d345d2c224ed // indirect
 	github.com/ClickHouse/ch-go v0.48.0 // indirect
 	github.com/ClickHouse/clickhouse-go/v2 v2.3.0 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
